@@ -1,0 +1,665 @@
+:root{
+    --main-color:#1c1c1c;
+    --background-color:#f7f7f787;
+    --secondry-background-color:#f4f4f4;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    height: 2000px;
+}
+ul{
+    list-style: none;
+}
+/* <----------------- start header ---------------> */
+header .layer{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.500),rgba(0, 0, 0, 0.500),rgba(0, 0, 0, 0.500)),url(../img/bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+}
+header  .navbar{
+    background-color: rgba(0, 0, 0, 0.350) !important;
+}
+header .navbar-nav li{
+    position: relative;
+}
+header .navbar-nav li::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color:white;
+    bottom: 7px;
+    left: 0;
+    margin-left: 8px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+header .navbar-nav li.active::before{
+    width: 75%;
+}
+header .navbar-nav li:hover::before{
+    width: 75%;
+}
+header   .wrapper  .dynamic-txt {
+    overflow: hidden;
+    height: 70px;
+    line-height: 105px;
+}
+header .wrapper  ul {
+    list-style: none;
+    text-align: center;
+}
+header .wrapper  ul li{
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-left: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: width 1.5s steps(18) infinite alternate,
+    slider 10s steps(3)infinite alternate;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@keyframes slider{
+    to{
+        top: -320px;
+    }
+}
+@keyframes width{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+header .social li svg{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.350);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 0.3s;
+    cursor: pointer;
+}
+header .social li svg:hover{
+    color:black;
+    background-color: white;
+   
+}
+
+.navbar  label , .navbar #menu {
+    display: none;
+ }
+ @media screen and (max-width:992px) and (min-width:768px){
+    header  .navbar-nav{
+        text-align: center !important;
+    }
+    header  .navbar-nav li{
+        padding: 20px;
+        
+    }
+    header .navbar-nav li::before{
+        display: none;
+    }
+    .navbar  label  {
+        display: block;
+        cursor: pointer;
+     }
+     .navbar  .nav-menu  {
+        clip-path: circle(0% at 50% 50%);
+        flex-direction: column;
+        position: absolute;
+        top:100%;
+        background-color: rgba(0, 0, 0, 0.51);
+        gap: 10px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 9999;
+        height: 100vh;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+}
+.navbar  .nav-menu li a{
+    padding: 10px 0;
+    background-color: #333;
+ }
+ .navbar #menu:checked ~ .nav-menu{
+    clip-path: circle(70.7% at 50% 50%);
+ }
+ }
+@media screen and (max-width:767px) and (min-width:500px){
+    header  .navbar-nav{
+        text-align: center !important;
+    }
+    header  .navbar-nav li{
+        padding: 20px;
+        
+    }
+    header .navbar-nav li::before{
+        display: none;
+    }
+    .navbar  label  {
+        display: block;
+        cursor: pointer;
+     }
+     .navbar  .nav-menu  {
+        clip-path: circle(0% at 50% 50%);
+        flex-direction: column;
+        position: absolute;
+        top:100%;
+        background-color: rgba(0, 0, 0, 0.51);
+        gap: 10px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 9999;
+        height: 100vh;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+}
+.navbar  .nav-menu li a{
+    padding: 10px 0;
+    background-color: #333;
+ }
+ .navbar #menu:checked ~ .nav-menu{
+    clip-path: circle(70.7% at 50% 50%);
+ }
+ }
+ @media screen and (max-width:499px){
+    header  .navbar-nav{
+        text-align: center !important;
+    }
+    header  .navbar-nav li{
+        padding: 20px;
+        
+    }
+    header .navbar-nav li::before{
+        display: none;
+    }
+    .navbar  label  {
+        display: block;
+        cursor: pointer;
+     }
+     .navbar  .nav-menu  {
+        clip-path: circle(0% at 50% 50%);
+        flex-direction: column;
+        position: absolute;
+        top:100%;
+        background-color: rgba(0, 0, 0, 0.51);
+        gap: 10px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 9999;
+        height: 100vh;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+}
+.navbar  .nav-menu li a{
+    padding: 10px 0;
+    background-color: #333;
+ }
+ .navbar #menu:checked ~ .nav-menu{
+    clip-path: circle(70.7% at 50% 50%);
+ }
+ .navbar label svg{
+    margin-right: 10px;
+ }
+ }
+/* <----------------- end header ---------------> */
+/* <----------------- start About section --------------->  */
+.about{
+    margin-top: 5rem;
+}
+.about .container .image{
+    position: relative;
+    padding: 0 0 0 30px;
+    margin-bottom: 4rem;
+}
+
+.about .container .image::after{
+    position: absolute;
+    content: "";
+    background-image: url(../img/dots.png);
+    background-repeat: repeat;
+    left: 0;
+    bottom: -35px;
+    width: 85%;
+    height: 85%;
+    z-index: -1;
+}
+.about .container .about-content a:first-of-type{
+    background-color: var(--main-color) ;
+    color: white;
+    transition:all 0.8s;
+    -webkit-transition:all 0.8s;
+    -moz-transition:all 0.8s;
+    -ms-transition:all 0.8s;
+    -o-transition:all 0.8s;
+}
+.about .container .about-content a:first-of-type:hover{
+    background-color: white ;
+    color: black;
+    border: 1px solid var(--main-color) ;
+}
+.about .container .about-content a:last-of-type{
+    background-color: white ;
+    color: black;
+    border: 1px solid var(--main-color) ;
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+}
+.about .container .about-content a:last-of-type:hover{
+    background-color: var(--main-color) ;
+    color: white;
+}
+/* <----------------- end About section --------------->  */
+/* <----------------- start heading section --------------->  */
+
+.heading{
+    text-align: center;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+.heading h1{
+    font-weight: 900 !important;
+}
+.heading::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-image: url(../img/dots.png);
+    background-repeat: repeat;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* <----------------- end heading section --------------->  */
+/* <----------------- start service section --------------->  */
+.service{
+    background-color:var(--background-color) ;
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+}
+.service .service-content svg{
+    background-color:var(--secondry-background-color);
+    width: 30px;
+    margin: auto;
+    height: 30px;
+    padding: 15px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+}
+.service .card:hover svg{
+    background-color: var(--main-color);
+    color: white;
+}
+/* <----------------- end service section --------------->  */
+/* <----------------- start portifolio section --------------->  */
+.portfolio{
+    margin-top: 5rem;
+}
+.portfolio .portfolio-content li{
+    position: relative;
+}
+.portfolio .portfolio-content li.active::before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    bottom: 0px;
+    left: 50%;
+    background-color: var(--main-color);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.portfolio .portfolio-content li::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: 0px;
+    left: 50%;
+    background-color: var(--main-color);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.portfolio .portfolio-content li:hover::before{
+    width: 50%;
+}
+.portfolio .portfolio-content .nav-link{
+    background-color: transparent !important;
+}
+.portfolio .portfolio-content .nav-item button{
+    color: var(--main-color);
+}
+.portfolio .tab-content .cardx{
+    position: relative;
+}
+.portfolio .tab-content .cardx .over-lay{
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    bottom: 7px;
+    right: 7px;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.90);
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+}
+.portfolio .tab-content .cardx:hover .over-lay{
+    opacity: 1;
+}
+.portfolio .tab-content .cardx .over-lay svg{
+    width: 15px;
+    height: 15px;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.portfolio .tab-content .cardx .over-lay svg:hover{
+    background-color: white;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+.portfolio .tab-content .cardx .over-lay .image-name h6{
+    position: relative;
+    top: -10px;
+    transition: all 1s ;
+    -webkit-transition: all 1s ;
+    -moz-transition: all 1s ;
+    -ms-transition: all 1s ;
+    -o-transition: all 1s ;
+}
+.portfolio .tab-content .cardx .over-lay .image-name .icons{
+    position: relative;
+    bottom: -10px;
+    transition: all 1s ;
+    -webkit-transition: all 1s ;
+    -moz-transition: all 1s ;
+    -ms-transition: all 1s ;
+    -o-transition: all 1s ;
+}
+.portfolio .tab-content .cardx .over-lay:hover .image-name .icons{
+    bottom: 0;
+}
+.portfolio .tab-content .cardx:hover .over-lay .image-name h6{
+    top: 0;
+}
+/* <----------------- end portifolio section --------------->  */
+/* <----------------- start testimonial section --------------->  */
+.testimonials{
+    margin-top: 5rem;
+    background-color: var(--background-color);
+}
+.testimonials .testimonial-content .carousel-item .image img{
+    width: 150px;
+    height: 150px;
+ border-radius: 50%;
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+ -ms-border-radius: 50%;
+ -o-border-radius: 50%;
+}
+.testimonials .testimonial-content .carousel-indicators button{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-left: 15px;
+    background-color: var(--main-color);
+}
+/* <----------------- end testimonial section --------------->  */
+/* <----------------- start number  section --------------->  */
+.numbers{
+    margin-top: 5rem;
+}
+.numbers .box svg{
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 50%;
+    transition: all 0.6s;
+    color: var(--main-color);
+}
+.numbers .box h4{
+    font-size: 2rem;  
+    font-weight: 800;
+    color: var(--main-color);
+}
+.numbers .container .box1 h4 span::after{
+    content: "850";
+    position: relative;
+    animation:num1 2s alternate ;
+    -webkit-animation:num1 2s alternate ;
+}
+@keyframes num1{
+    0%{
+        content:"150";
+    }
+    25%{
+        content:"350";
+    }
+    50%{
+        content:"550";
+    }
+    75%{
+        content:"650";
+    }
+    100%{
+        content:"850";
+    }
+}
+.numbers .box2 h4 span::after{
+    content: "230";
+    position: relative;
+    animation:num2 2s alternate ;
+    -webkit-animation:num2 2s alternate ;
+}
+@keyframes num2{
+    0%{
+        content:"50";
+    }
+    25%{
+        content:"150";
+    }
+    50%{
+        content:"180";
+    }
+    75%{
+        content:"200";
+    }
+    100%{
+        content:"230";
+    }
+}
+.numbers .box3 h4 span::after{
+    content: "9450";
+    position: relative;
+    animation:num3 2s alternate ;
+    -webkit-animation:num3 2s alternate ;
+}
+@keyframes num3{
+    0%{
+        content:"500";
+    }
+    25%{
+        content:"2000";
+    }
+    50%{
+        content:"4500";
+    }
+    75%{
+        content:"6500";
+    }
+    100%{
+        content:"9450";
+    }
+}
+.numbers .box4 h4 span::after{
+    content: "780";
+    position: relative;
+    animation:num4 2s alternate ;
+    -webkit-animation:num4 2s alternate ;
+}
+@keyframes num4{
+    0%{
+        content:"100";
+    }
+    25%{
+        content:"250";
+    }
+    50%{
+        content:"500";
+    }
+    75%{
+        content:"650";
+    }
+    100%{
+        content:"780";
+    }
+}
+/* <----------------- end number  section --------------->  */
+/* <----------------- start blog section --------------->  */
+.blog{
+    background-color:var(--background-color) ;
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+}
+.blog .container .carousel-indicators button{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-left: 15px;
+    background-color: var(--main-color);
+}
+.blog .carousel-item .card img{
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+}
+.blog .carousel-item .card img:hover{
+    scale: 1.1;
+}
+/* <----------------- start blog section --------------->  */
+/* <----------------- start contact section --------------->  */
+.contact{
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+}
+.contact .contact-content .content svg{
+    width: 30px;
+    height: 30px;
+    padding: 15px;
+    margin-bottom: 1.5rem;
+    background-color: var(--secondry-background-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+}
+.contact .contact-content .content svg:hover{
+    background-color: var(--main-color);
+    color: white;
+} 
+.contact .contact-form input,.contact .contact-form textarea{
+    background-color: var(--secondry-background-color);
+    border: none;
+}
+.contact .contact-form .form-control:focus{
+    box-shadow: none;
+}
+.contact .contact-form button:hover{
+    background-color: white;
+    border: 1px solid var(--main-color);
+    color:black;
+}
+/* <----------------- end contact section --------------->  */
+/* <----------------- start footer section --------------->  */
+footer{
+    background-color: var(--main-color);
+}
+footer p{
+    color:#748182;
+}
+/* <----------------- end footer section --------------->  */
