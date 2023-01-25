@@ -416,8 +416,7 @@ header .social li:hover{
     opacity: 1;
 }
 .portfolio .tab-content .cardx .over-lay i{
-    width: 15px;
-    height: 15px;
+    display: inline;
     background-color: var(--main-color);
     color: white;
     padding: 10px;
