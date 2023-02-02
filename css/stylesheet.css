@@ -196,7 +196,7 @@ header .social li:hover{
         text-align: center !important;
     }
     header  .navbar-nav li{
-        padding: 20px;
+        padding: 20px 0;
         
     }
     header .navbar-nav li::before{
